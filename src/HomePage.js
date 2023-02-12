@@ -1,8 +1,10 @@
 import './styles/PostMain.css';
-import './styles/Header.css'
+import './styles/Header.css';
+import './styles/NavBAr.css';
 import { Header } from "./Hader";
 import { NavBar } from "./NavBar";
 import { PostsMain } from "./PostsMain";
+
 import { useEffect, useState } from "react";
 import { getAxios } from "./Api/get_api";
 
@@ -22,7 +24,7 @@ function HomePage () {
     }, [])
 
     return(
-        <div className="general_grid">
+        <div className="grid-general">
             <Header/>
             <NavBar/>
             <PostsMain post = {postData}/>

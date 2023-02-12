@@ -1,0 +1,36 @@
+.grid-posts{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background-color: lightpink;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post:hover{
+    background-color: aquamarine;
+}
+.post p{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+.post-title{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.post-body{
+    font-size: 0.5rem;
+}
+
+@media (min-width: 960px) {
+    .grid-posts{
+        grid-template-columns: repeat(2, 1fr);
+        background-color:lightskyblue;
+    }
+    .post:hover{
+        background-color:rosybrown;
+    }
+}
+

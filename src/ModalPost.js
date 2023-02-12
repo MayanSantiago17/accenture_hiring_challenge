@@ -1,8 +1,7 @@
+import './styles/ModalPost.css'
 
 
-// importar hoja de estilos
-
-function ModalPost ({show, close}) {
+function ModalPost ({show, onClose}) {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -11,12 +10,12 @@ function ModalPost ({show, close}) {
     if(!show) return null;
 
     return(
-        <div className="modal" onClick={close}>
+        <div className="modal" onClick={onClose}>
             <form className="modal-content" onSubmit={handleSubmit}>
                 <input type="text" placeholder="title" name="title"></input>
                 <input type="text" placeholder="description" name="body"></input>
-                <button type="submit" className="accept-button">OK</button>
-                <button className="cancel-button" onClick={close}>CLOSE</button>
+                <button type="submit" className="accept-button">Accept</button>
+                <button className="cancel-button" onClick={onClose}>Cancel</button>
             </form>
         </div>
     )
