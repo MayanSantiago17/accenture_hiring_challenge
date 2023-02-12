@@ -1,0 +1,4 @@
+.general_grid{
+    display: grid;
+    grid-template-rows: 12rem 5rem 1fr;
+}
